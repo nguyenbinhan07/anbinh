@@ -1,0 +1,38 @@
+/*Viết mã css*/
+*{
+	margin:3px;
+	padding:2pt;
+	font-family:Time New roman;
+	font-size:16pt;
+	line-height:1.6;
+	color:black;
+}
+div.container{
+	margin: 25px 150px;
+	background-color:beige;
+	padding:10px;
+	margin:120pt;
+	
+}
+#title{
+	text-transform:uppercase;
+	font-size:30px;
+	letter-spacing:3px;
+	text-align:center;
+}
+label{
+	display:block;
+}
+form#frmLogin{
+	background-color:#2E8B57;
+	padding:30px;
+	max-width:600px;
+	margin:auto;
+}
+div.form-group{
+	width:600px;
+}
+input.form-control{
+	width:128%;
+	
+}	
