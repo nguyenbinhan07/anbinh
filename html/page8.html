@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Thiết kế trang giới thiệu thông tin sản phẩm</title>
+        <meta charset="utf-8">
+    </head>
+    <body> 
+        <div class="container">
+            <div id="product-list">
+                </div>
+        </div>
+
+        <script>
+            // Xác định khung chứa product-list
+            const listProducts = document.getElementById("product-list"); // tác động đến thẻ <div> có id = "product-list"
+
+            // Tạo 1 container có class = "item"
+            const item = document.createElement("div"); 
+            item.setAttribute("class", "item"); // <div class = "item"></div>
+
+            // Tạo 2 khung chứa Hình ảnh và Thông tin
+
+            // Tạo 1 container chứa hình ảnh có class ="image" ==> chỉ có 1 con là <img>
+            const containerImage = document.createElement("div"); 
+            containerImage.setAttribute("class", "image"); // <div class = "image"></div>
+
+            // Tạo ảnh
+            const img = document.createElement("img");
+            img.setAttribute("src", "../assets/images/autrung.jpg");
+            img.setAttribute("alt", "Ấu trùng tinh nghịch");
+            img.setAttribute("style", "width:100%; max-width:150px");
+
+            // Đưa hình ảnh vào khung
+            containerImage.appendChild(img);
+
+            // Tạo 1 container chứa thông tin sản phẩm có class = "info" ==> có 3 <p> và 1 <a>
+            const containerInfo = document.createElement("div"); // <div></div>
+            containerInfo.setAttribute("class", "info"); // <div class = "info"></div>
+            
+            // Tạo <p> tên sản phẩm
+            const nameProduct = document.createElement("p");
+            nameProduct.innerHTML = "Ảnh ấu trùng ";
+
+            // Tạo <p> chứa giá sản phẩm
+            const price = document.createElement("p");
+            price.innerHTML = "36k /1 bức";
+
+            // Tạo <p> chứa mô tả sản phẩm
+            const description = document.createElement("p");
+            description.innerHTML = "Đây là một bộ phim hoạt hình được trẻ em yêu thích...";
+
+            // Tạo <a> chứa liên kết
+            const linkProduct = document.createElement("a");
+            linkProduct.innerHTML = "Xem chi tiết";
+            linkProduct.setAttribute("href", "page6.html"); // Sửa sau
+
+            // Gắn 4 con vào khung Info
+            containerInfo.appendChild(nameProduct);
+            containerInfo.appendChild(price);
+            containerInfo.appendChild(description);
+            containerInfo.appendChild(linkProduct);
+
+            // Thêm khung chứa image và info vào item
+            item.appendChild(containerImage); 
+            item.appendChild(containerInfo); 
+
+            // Thêm item vào list product
+            listProducts.appendChild(item);
+        </script>
+    </body>
+</html>
